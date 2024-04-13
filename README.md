@@ -7,34 +7,6 @@
 Xilinx 14.7
 Spartan6 FPGA
 
-## LOGIC DIAGRAM
-
-### ENCODER
-
-![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/3cd1f95e-7531-4cad-9154-fdd397ac439e)
-
-
-### DECODER
-
-![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/45a5e6cf-bbe0-4fd5-ac84-e5ad4477483b)
-
-
-### MULTIPLEXER
-
-![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/427f75b2-8e67-44b9-ac45-a66651787436)
-
-
-### DEMULTIPLEXER
-
-![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/1c45a7fc-08ac-4f76-87f2-c084e7150557)
-
-
-### MAGNITUDE COMPARATOR
-
-![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/b2fe7a05-6bf7-4dcb-8f5d-28abbf7ea8c2)
-
-
-  
 ## PROCEDURE:
 STEP:1  Start  the Xilinx navigator, Select and Name the New project.
 STEP:2  Select the device family, device, package and speed.       
@@ -48,9 +20,14 @@ STEP:9  In the Design Object List Window, enter the pin location for each pin in
 STEP:10 Double click on the Implement Design and double click on the Generate Programming File to create a bitstream of the design.(.v) file is converted into .bit file here.
 STEP:11  On the board, by giving required input, the LEDs starts to glow light, indicating the output.
 
-## VERILOG CODE
+## ENCODER:
 
-### ENCODER:
+### LOGIC DIAGRAM:
+
+![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/3cd1f95e-7531-4cad-9154-fdd397ac439e)
+
+### Verilog Code:
+
 ```
 module encoder(d,a,b,c) ;
 input [7:0]d;
@@ -60,7 +37,21 @@ or(b,d[2],d[3],d[6],d[7]);
 or(c,d[1],d[3],d[5],d[7]);
 endmodule
 ```
-### DECODER:
+
+### Output:
+
+![image](https://github.com/Aravind00033/VLSI-LAB-EXP-2/assets/160571380/99f59f8b-2ad1-4bdb-b594-18df07b46260)
+
+
+
+## DECODER:
+
+### LOGIC DIAGRAM:
+
+![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/45a5e6cf-bbe0-4fd5-ac84-e5ad4477483b)
+
+### Verilog Code:
+
 ```
 module decoder_8(a,b,c,y);
 input a,b,c; 
@@ -75,7 +66,19 @@ and g7(y[6], (a), (b), (~c));
 and g8(y[7], (a), (b), (c));
 endmodule
 ```
-### MULTIPLEXER:
+
+### Output:
+
+![image](https://github.com/Aravind00033/VLSI-LAB-EXP-2/assets/160571380/1d6d400c-df4a-4d2b-b43a-24f4cd7c06a9)
+
+## MULTIPLEXER:
+
+### Logic Diagram:
+
+![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/427f75b2-8e67-44b9-ac45-a66651787436)
+
+### Verilog Code:
+
 ```
 module mux(a,b,c,d,s0,s1,y);
 input a,b,c,d,s0,s1;
@@ -83,7 +86,20 @@ output y;
 assign y=s1 ?(s0?d:c):(s0?b:a);
 endmodule
 ```
-### DEMULTIPLEXER:
+
+### Output:
+
+![image](https://github.com/Aravind00033/VLSI-LAB-EXP-2/assets/160571380/09fdc9d7-019e-4e50-a098-32e12686d65d)
+
+
+## DEMULTIPLEXER:
+
+### Logic Diagram:
+
+![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/1c45a7fc-08ac-4f76-87f2-c084e7150557)
+
+### Verilog Code:
+
 ```
 module demux(in,s0,s1,s2,d0,d1,d2,d3,d4,d5,d6,d7);
 input in,s0,s1,s2;
@@ -98,7 +114,19 @@ d6=(in & s2 & s1 &~s0),
 d7=(in & s2 & s1 &s0);
 endmodule
 ```
-### MAGNITUDE COMPARATOR:
+
+### Output:
+![image](https://github.com/Aravind00033/VLSI-LAB-EXP-2/assets/160571380/d9cc9069-147a-485f-bd8b-9630d21f2285)
+
+
+## MAGNITUDE COMPARATOR:
+
+### Logic Diagram:
+
+![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/b2fe7a05-6bf7-4dcb-8f5d-28abbf7ea8c2)
+
+### Verilog Code:
+
 ```
 module magcomp(a,b,l,g,e);
 input [3:0]a,b;
@@ -126,24 +154,10 @@ end
 end
 endmodule
 ```
-## OUTPUT WAVEFORM: 
 
-### ENCODER:
-![311429794-789f3e96-629c-4d5c-af76-3192d8efe8fc](https://github.com/Aravind00033/VLSI-LAB-EXP-2/assets/160571380/5bcda983-4292-453e-b5d5-42cb04c9c9e7)
+### Output:
 
-### DECODER:
-![311429799-7516940e-abcd-4f9f-b957-32045c0d5ddd](https://github.com/Aravind00033/VLSI-LAB-EXP-2/assets/160571380/5ebcd2a0-f165-4e5f-b5dd-04eb1130a757)
-
-
-### MULTIPLEXER:
-![311429897-6e35ad75-0ce0-4a15-b4fa-d094ec702889](https://github.com/Aravind00033/VLSI-LAB-EXP-2/assets/160571380/392d76ba-2b9e-4159-bd3d-68ceb1ff931c)
-
-### DEMULTIPLEXER:
-![311429811-fc1c76a9-da23-4998-bb7e-1da35feb0517](https://github.com/Aravind00033/VLSI-LAB-EXP-2/assets/160571380/9b6f536d-09e0-4cd1-8a26-7f40834658e7)
-
-
-### MAGNITUDE COMPARATOR:
-![311429788-3e5be226-14ff-462e-8d5b-995a52bf8221](https://github.com/Aravind00033/VLSI-LAB-EXP-2/assets/160571380/e4820c0d-7dcd-41da-8647-2fee59ae6722)
+![image](https://github.com/Aravind00033/VLSI-LAB-EXP-2/assets/160571380/f0636717-95d9-45f1-96c6-ec06c9c8be69)
 
 
 ## RESULT:
