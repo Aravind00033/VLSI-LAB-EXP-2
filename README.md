@@ -40,8 +40,7 @@ endmodule
 
 ### Output:
 
-![image](https://github.com/Aravind00033/VLSI-LAB-EXP-2/assets/160571380/99f59f8b-2ad1-4bdb-b594-18df07b46260)
-
+![image](https://github.com/Aravind00033/VLSI-LAB-EXP-2/assets/160571380/fdc81d82-79a5-476a-b771-025e4d8868fa)
 
 
 ## DECODER:
@@ -69,7 +68,7 @@ endmodule
 
 ### Output:
 
-![image](https://github.com/Aravind00033/VLSI-LAB-EXP-2/assets/160571380/1d6d400c-df4a-4d2b-b43a-24f4cd7c06a9)
+![image](https://github.com/Aravind00033/VLSI-LAB-EXP-2/assets/160571380/e8639277-de58-436c-bb25-4b5971569660)
 
 ## MULTIPLEXER:
 
@@ -88,9 +87,7 @@ endmodule
 ```
 
 ### Output:
-
-![image](https://github.com/Aravind00033/VLSI-LAB-EXP-2/assets/160571380/09fdc9d7-019e-4e50-a098-32e12686d65d)
-
+![image](https://github.com/Aravind00033/VLSI-LAB-EXP-2/assets/160571380/53cc9fbb-47b4-4e99-a591-2796e77a1802)
 
 ## DEMULTIPLEXER:
 
@@ -116,7 +113,8 @@ endmodule
 ```
 
 ### Output:
-![image](https://github.com/Aravind00033/VLSI-LAB-EXP-2/assets/160571380/d9cc9069-147a-485f-bd8b-9630d21f2285)
+
+![image](https://github.com/Aravind00033/VLSI-LAB-EXP-2/assets/160571380/98568c41-f1e6-4042-83cb-f7c771f162dc)
 
 
 ## MAGNITUDE COMPARATOR:
@@ -157,7 +155,7 @@ endmodule
 
 ### Output:
 
-![image](https://github.com/Aravind00033/VLSI-LAB-EXP-2/assets/160571380/f0636717-95d9-45f1-96c6-ec06c9c8be69)
+![image](https://github.com/Aravind00033/VLSI-LAB-EXP-2/assets/160571380/e7ca2928-93f0-4837-9fd7-4f63721f8dc9)
 
 
 ## RESULT:
