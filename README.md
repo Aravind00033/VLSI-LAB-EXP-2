@@ -1,32 +1,34 @@
-# SIMULATION AND IMPLEMENTATION OF  COMBINATIONAL LOGIC CIRCUITS
+**SIMULATION AND IMPLEMENTATION OF  COMBINATIONAL LOGIC CIRCUITS**
 
-## AIM: 
- To simulate and synthesis ENCODER, DECODER, MULTIPLEXER, DEMULTIPLEXER, MAGNITUDE COMPARATOR using Xilinx ISE.
+**AIM:**
 
-## APPARATUS REQUIRED:
-Xilinx 14.7
-Spartan6 FPGA
+ To simulate and synthesis ENCODER, DECODER, MULTIPLEXER, DEMULTIPLEXER, MAGNITUDE COMPARATOR using Vivado 2023.2.
 
-## PROCEDURE:
-STEP:1  Start  the Xilinx navigator, Select and Name the New project.
-STEP:2  Select the device family, device, package and speed.       
-STEP:3  Select new source in the New Project and select Verilog Module as the Source type.                       
-STEP:4  Type the File Name and Click Next and then finish button. Type the code and save it.
-STEP:5  Select the Behavioral Simulation in the Source Window and click the check syntax.                       
-STEP:6  Click the simulation to simulate the program and  give the inputs and verify the outputs as per the truth table.               
-STEP:7  Select the Implementation in the Sources Window and select the required file in the Processes Window.
-STEP:8  Select Check Syntax from the Synthesize  XST Process. Double Click in the  FloorplanArea/IO/Logic-Post Synthesis process in the User Constraints process group. UCF(User constraint File) is obtained. 
-STEP:9  In the Design Object List Window, enter the pin location for each pin in the Loc column Select save from the File menu.
-STEP:10 Double click on the Implement Design and double click on the Generate Programming File to create a bitstream of the design.(.v) file is converted into .bit file here.
-STEP:11  On the board, by giving required input, the LEDs starts to glow light, indicating the output.
+**APPARATUS REQUIRED:**
 
-## ENCODER:
+Vivado 2023.2
 
-### LOGIC DIAGRAM:
+**PROCEDURE:**
+
+STEP:1 Start the Vivado, Select and Name the New project.
+
+STEP:2 Select the device family, device, package and speed.
+
+STEP:3 Select new source in the New Project and select Verilog Module as the Source type.
+
+STEP:4 Type the File Name and Click Next and then finish button. Type the code and save it.
+
+STEP:5 Select the Behavioural Simulation in the Source Window and click the check syntax.
+
+STEP:6 Click the simulation to simulate the program and give the inputs and verify the outputs as per the truth table.
+
+**ENCODER:**
+
+**LOGIC DIAGRAM:**
 
 ![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/3cd1f95e-7531-4cad-9154-fdd397ac439e)
 
-### Verilog Code:
+**VERILOG CODE:**
 
 ```
 module encoder(d,a,b,c) ;
@@ -38,18 +40,18 @@ or(c,d[1],d[3],d[5],d[7]);
 endmodule
 ```
 
-### Output:
+**OUTPUT:**
 
-![image](https://github.com/Aravind00033/VLSI-LAB-EXP-2/assets/160571380/fdc81d82-79a5-476a-b771-025e4d8868fa)
+![311429794-789f3e96-629c-4d5c-af76-3192d8efe8fc](https://github.com/Aravind00033/VLSI-LAB-EXP-2/assets/160571380/10b01fb7-5a97-4184-becb-7e9cc5e188b5)
 
 
-## DECODER:
+**DECODER:**
 
-### LOGIC DIAGRAM:
+**LOGIC DIAGRAM:**
 
 ![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/45a5e6cf-bbe0-4fd5-ac84-e5ad4477483b)
 
-### Verilog Code:
+**VERILOG CODE:**
 
 ```
 module decoder_8(a,b,c,y);
@@ -66,17 +68,18 @@ and g8(y[7], (a), (b), (c));
 endmodule
 ```
 
-### Output:
+**OUTPUT:**
 
-![image](https://github.com/Aravind00033/VLSI-LAB-EXP-2/assets/160571380/e8639277-de58-436c-bb25-4b5971569660)
+![311429799-7516940e-abcd-4f9f-b957-32045c0d5ddd](https://github.com/Aravind00033/VLSI-LAB-EXP-2/assets/160571380/83063f1a-93a3-4ffb-82bb-4f6f0bd99994)
 
-## MULTIPLEXER:
 
-### Logic Diagram:
+**MULTIPLEXER:**
+
+**LOGIC DIAGRAM:**
 
 ![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/427f75b2-8e67-44b9-ac45-a66651787436)
 
-### Verilog Code:
+**VERILOG CODE:**
 
 ```
 module mux(a,b,c,d,s0,s1,y);
@@ -86,16 +89,17 @@ assign y=s1 ?(s0?d:c):(s0?b:a);
 endmodule
 ```
 
-### Output:
-![image](https://github.com/Aravind00033/VLSI-LAB-EXP-2/assets/160571380/53cc9fbb-47b4-4e99-a591-2796e77a1802)
+**OUTPUT:**
 
-## DEMULTIPLEXER:
+![311429897-6e35ad75-0ce0-4a15-b4fa-d094ec702889](https://github.com/Aravind00033/VLSI-LAB-EXP-2/assets/160571380/88814d39-9826-450d-88b3-c97df3173d44)
 
-### Logic Diagram:
+**DEMULTIPLEXER:**
+
+**LOGIC DIAGRAM::**
 
 ![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/1c45a7fc-08ac-4f76-87f2-c084e7150557)
 
-### Verilog Code:
+**VERILOG CODE:**
 
 ```
 module demux(in,s0,s1,s2,d0,d1,d2,d3,d4,d5,d6,d7);
@@ -112,18 +116,18 @@ d7=(in & s2 & s1 &s0);
 endmodule
 ```
 
-### Output:
+**OUTPUT:**
 
-![image](https://github.com/Aravind00033/VLSI-LAB-EXP-2/assets/160571380/98568c41-f1e6-4042-83cb-f7c771f162dc)
+![311429811-fc1c76a9-da23-4998-bb7e-1da35feb0517](https://github.com/Aravind00033/VLSI-LAB-EXP-2/assets/160571380/3544470b-bf04-4b4e-802f-0ef9b1e2e5fc)
 
 
-## MAGNITUDE COMPARATOR:
+**MAGNITUDE COMPARATOR:**
 
-### Logic Diagram:
+**LOGIC DIAGRAM:**
 
 ![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/b2fe7a05-6bf7-4dcb-8f5d-28abbf7ea8c2)
 
-### Verilog Code:
+**VERILOG CODE:**
 
 ```
 module magcomp(a,b,l,g,e);
@@ -153,12 +157,12 @@ end
 endmodule
 ```
 
-### Output:
+**OUTPUT:**
 
-![image](https://github.com/Aravind00033/VLSI-LAB-EXP-2/assets/160571380/e7ca2928-93f0-4837-9fd7-4f63721f8dc9)
+![311429788-3e5be226-14ff-462e-8d5b-995a52bf8221](https://github.com/Aravind00033/VLSI-LAB-EXP-2/assets/160571380/628ca454-3a5a-4795-9ae8-e2f0070d1344)
 
+**RESULT:**
 
-## RESULT:
-Hence ENCODER, DECODER, MULTIPLEXER, DEMULTIPLEXER, MAGNITUDE COMPARATOR are simulated and synthesised using Xilinx ISE
+Hence ENCODER, DECODER, MULTIPLEXER, DEMULTIPLEXER, MAGNITUDE COMPARATOR are simulated and synthesised using Vivado 2023.2
 
 
